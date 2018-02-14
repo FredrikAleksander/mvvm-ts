@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+        "target": "es2015",
+        "module": "commonjs",
+		"moduleResolution": "node",
+        "noImplicitAny": false,
+		"sourceMap": true,
+		"outDir": "build",
+		"importHelpers": true,
+		"downlevelIteration": true,
+		"strictNullChecks": true,
+		"declaration": true,
+		"baseUrl": ".",
+		"paths": {
+				"mvvm": ["src/mvvm/main"],
+				"mvvm-web": ["src/mvvm-web/main"]
+		}
+    },
+	"include": [
+			"src/**/*.ts"
+	],
+    "exclude": [
+        "node_modules"
+    ]
+}

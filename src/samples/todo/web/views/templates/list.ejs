@@ -1,0 +1,30 @@
+<div>
+		<% if(locals.tasks.length === 0) { %>
+		<div>
+				You have no tasks. I find that hard to believe, <a href="#/NewTask">create a task</a>
+				to keep track of your activities
+		</div>
+		<% } else { %>
+		<a href="#/NewTask">New Task</a>
+		<table>
+				<thead>
+				</thead>
+				<tbody>
+				<% for(var i = 0; i < locals.tasks.length; i++) { %>
+						<tr>
+								<td><%= locals.tasks[i].title %></td>
+								<td>Never</td>
+								<td>Never</td>
+								<td>
+										<a href="#/Tasks/<%=locals.tasks[i].id%>">Details</a>
+										<a href="#/Tasks/<%=locals.tasks[i].id%>/Edit">Edit</a>
+										<a href="#/Tasks/<%=locals.tasks[i].id%>/Delete">Delete</a>
+								</td>
+						</tr>
+				<% } %>
+				</tbody>
+				<tfoot>
+				</tfoot>
+		</table>
+		<% } %>
+</div>

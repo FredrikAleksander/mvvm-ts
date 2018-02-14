@@ -1,0 +1,40 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "module": "./build/module.esm",
+  "types": "./build/mvvm/main.d.ts",
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/mocha": "^2.2.48",
+    "@types/sinon": "^4.1.3",
+    "@types/sinon-chai": "^2.7.29",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.0.0",
+    "rollup": "^0.55.3",
+    "rollup-plugin-ejs": "^1.1.1",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-typescript2": "^0.11.0",
+    "sinon": "^4.2.2",
+    "sinon-chai": "^2.14.0",
+    "typescript": "^2.6.2"
+  },
+  "bin": {
+    "app": "./lib/main.js"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js && tsc",
+    "debug": "tsc && mocha --nolazy --inspect --inspect-brk build/**/*.spec.js",
+    "test": "tsc && mocha build/**/*.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+		"reflect-metadata": "^0.1.12",
+		"tslib": "^1.9.0"
+  }
+}
