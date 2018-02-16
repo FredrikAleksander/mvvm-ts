@@ -39,7 +39,8 @@
     "test:e2e": "node build/e2erunner.js",
     "test": "mocha build/specs/**/*.spec.js && node build/e2erunner.js",
     "build-and-test:unit": "tsc && mocha build/specs/**/*.spec.js",
-    "build-and-test:e2e": "rollup -c rollup.config.js && tsc && node build/e2erunner.js"
+    "build-and-test:e2e": "rollup -c rollup.config.js && tsc && node build/e2erunner.js",
+	"build-and-test": "rollup -c rollup.config.js && tsc && mocha build/specs/**/*.spec.js && node build/e2erunner.js"
   },
   "author": "",
   "license": "ISC",
