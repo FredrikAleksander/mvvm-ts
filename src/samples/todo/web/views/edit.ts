@@ -5,8 +5,14 @@ import { HtmlView, querySelector, binding, trigger } from '../../../../mvvm-web/
 @injectable()
 export class TodoEditView extends HtmlView<TodoEdit> {
 		template = `
-		<input id="title"/>
-		<textarea id="description"></textarea>
+		<div class="form-field">
+				<label for="title">Title:</label>
+				<input id="title" />
+		</div>
+		<div class="form-field">
+				<label for="description">Description:</label>
+				<textarea id="description"></textarea>
+		</div>
 		<button id="submit">Save</button>
 		`
 

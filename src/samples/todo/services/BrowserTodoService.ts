@@ -24,7 +24,17 @@ function getTasks() {
 				localStorage.setItem('tasks', JSON.stringify(tasks));
 		}
 		else {
-				tasks = JSON.parse(tasksData);
+				tasks = JSON
+						.parse(tasksData)
+						.map((task) => {
+								return {
+										id: task.id,
+										title: task.title,
+										description: task.description,
+										created: new Date(task.created),
+										modified: new Date(task.modified)
+								};
+						});
 		}
 		return tasks;
 }

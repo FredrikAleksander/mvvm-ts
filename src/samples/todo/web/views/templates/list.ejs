@@ -1,24 +1,39 @@
 <div>
 		<% if(locals.tasks.length === 0) { %>
 		<div>
-				You have no tasks. I find that hard to believe, <a id="createTask" href="#/NewTask">create a task</a>
+				You have no tasks. I find that hard to believe, <a data-action="create" href="#/NewTask">create a task</a>
 				to keep track of your activities
 		</div>
 		<% } else { %>
-		<a href="#/NewTask">New Task</a>
+		<div class="topbar">
+				<a href="#/NewTask" class="nolinkstyles" data-action="create"><i class="far fa-plus-square"></i></a>
+		</div>
 		<table>
 				<thead>
+						<tr>
+								<th>Title</th>
+								<th>Created</th>
+								<th>Modified</th>
+								<th>Actions</th>
+						</tr>
 				</thead>
 				<tbody>
 				<% for(var i = 0; i < locals.tasks.length; i++) { %>
-						<tr>
+						<tr data-index="<%= i %>">
 								<td><%= locals.tasks[i].title %></td>
-								<td>Never</td>
-								<td>Never</td>
-								<td>
-										<a href="#/Tasks/<%=locals.tasks[i].id%>">Details</a>
-										<a href="#/Tasks/<%=locals.tasks[i].id%>/Edit">Edit</a>
-										<a href="#/Tasks/<%=locals.tasks[i].id%>/Delete">Delete</a>
+								<td><%= locals.tasks[i].created.toLocaleString() %></td>
+								<td><%= locals.tasks[i].modified.toLocaleString() %></td>
+								<td class="actions">
+										<a href="#/Tasks/<%=locals.tasks[i].id%>" class="nolinkstyles" data-action="details">
+												<i class="fas fa-info"></i>
+										</a>
+										<a href="#/Tasks/<%=locals.tasks[i].id%>/Edit" class="nolinkstyles" data-action="edit">
+												<i class="fas fa-edit"></i>
+										</a>
+										
+										<a href="#/Tasks/<%=locals.tasks[i].id%>/Delete" class="nolinkstyles" data-action="delete">
+												<i class="far fa-trash-alt"></i>
+										</a>
 								</td>
 						</tr>
 				<% } %>

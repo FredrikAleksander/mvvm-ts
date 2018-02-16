@@ -183,6 +183,8 @@ export class Binding {
 				var self = this;
 				var binder = this.binder;
 				this.reset();
+				element.setAttribute('data-binding-key', this.key.toString());
+				element.setAttribute('data-binding-property', this.viewModelPropertyKey.toString());
 				this.element = element;
 				this.subscription =
 					this.binder.listen(element, (event) => {
@@ -357,6 +359,8 @@ class TriggerBinding extends Binding {
 				var self = this;
 				var binder = this.binder;
 				this.reset();
+				element.setAttribute('data-trigger-key', this.key.toString());
+				element.setAttribute('data-trigger-property', this.viewModelPropertyKey.toString());
 				this.element = element;
 				if(element instanceof HTMLElement) {
 						this.subscription =
