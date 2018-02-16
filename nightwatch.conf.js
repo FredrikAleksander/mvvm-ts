@@ -11,13 +11,13 @@ module.exports = {
 
   "selenium" : {
     "start_process" : true,
-    "server_path" : ".\\node_modules\\selenium-server\\lib\\runner\\selenium-server-standalone-3.9.1.jar",
+    "server_path" : "./node_modules/selenium-server/lib/runner/selenium-server-standalone-3.9.1.jar",
     "log_path" : "",
     "port" : 4466,
     "cli_args" : {
-      "webdriver.chrome.driver" : ".\\node_modules\\.bin\\chromedriver" + cmdSuffix
-      ,"webdriver.gecko.driver" : ".\\node_modules\\.bin\\geckodriver" + cmdSuffix
-      ,"webdriver.edge.driver" : ".\\node_modules\\.bin\\edgedriver" + cmdSuffix
+      "webdriver.chrome.driver" : "./node_modules/.bin/chromedriver" + cmdSuffix
+      ,"webdriver.gecko.driver" : "./node_modules/.bin/geckodriver" + cmdSuffix
+      ,"webdriver.edge.driver" : "./node_modules/.bin/edgedriver" + cmdSuffix
     }
   },
 
