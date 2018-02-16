@@ -31,14 +31,14 @@
     "sinon-chai": "^2.14.0",
     "typescript": "^2.6.2"
   },
-  "bin": {
-    "app": "./lib/main.js"
-  },
   "scripts": {
     "build": "rollup -c rollup.config.js && tsc",
     "debug": "tsc && mocha --nolazy --inspect --inspect-brk build/specs/**/*.spec.js",
-    "test": "tsc && mocha build/specs/**/*.spec.js",
-    "test:e2e": "rollup -c rollup.config.js && tsc && node build\\e2erunner.js"
+	"test:unit": "mocha build/specs/**/*.spec.js",
+	"test:e2e": "node build/e2erunner.js",
+	"test": "mocha build/specs/**/*.spec.js && node build/e2erunner.js",
+    "build-and-test:unit": "tsc && mocha build/specs/**/*.spec.js",
+    "build-and-test:e2e": "rollup -c rollup.config.js && tsc && node build/e2erunner.js"
   },
   "author": "",
   "license": "ISC",

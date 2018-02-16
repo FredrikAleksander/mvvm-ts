@@ -34,7 +34,7 @@ module.exports = {
       "globals": {
 	  },
       "desiredCapabilities": {
-		"browserName": "chrome",
+		"browserName": "firefox",
         "marionette": true
       }
     },
