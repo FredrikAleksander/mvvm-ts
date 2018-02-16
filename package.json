@@ -1,7 +1,7 @@
 {
-  "name": "typescript-boilerplate",
-  "version": "1.0.0",
-  "description": "",
+  "name": "mvvm-ts",
+  "version": "0.0.1",
+  "description": "Typescript MVVM Framework",
   "main": "./build/index.js",
   "module": "./build/module.esm",
   "types": "./build/mvvm/main.d.ts",
@@ -42,8 +42,15 @@
     "build-and-test:e2e": "rollup -c rollup.config.js && tsc && node build/e2erunner.js",
 	"build-and-test": "rollup -c rollup.config.js && tsc && mocha build/specs/**/*.spec.js && node build/e2erunner.js"
   },
-  "author": "",
+  "author": {
+		  "name": "Fredrik A. Kristiansen",
+		  "email": "fredrikaxk@gmail.com"
+  },
+  "repository": "github:FredrikAleksander/mvvm-ts",
   "license": "ISC",
+  "engines": {
+		  "node": ">=6.13.0"
+  },
   "dependencies": {
     "reflect-metadata": "^0.1.12",
     "tslib": "^1.9.0"
