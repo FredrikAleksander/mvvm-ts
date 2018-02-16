@@ -7,7 +7,4 @@ node_js:
         - "5"
         - "4"
 script: echo "Running tests against $(node -v)..."
-script: npm run install
-script: npm run build
-script: npm run test:unit
-script: npm run test:e2e
+script: npm run build-and-test
