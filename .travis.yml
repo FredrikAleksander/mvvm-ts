@@ -1,9 +1,7 @@
-install:
-        - npm install
-script:
-        - npm run build
 jobs:
-        - stage: Unit Tests
-          script:  npm run test:unit
-        - stage: E2E Tests
-          script: npm run test:e2e
+        - stage: install
+          script: npm run install
+        - build:
+          script: npm run build
+        - stage: tests
+          script:  npm run test
