@@ -2,6 +2,8 @@ build/
 node_modules/
 
 samples/todo/**/*
+reports/
+*.log
 .rpt2_cache/
 !samples/todo/index.html
 !samples/todo/todo.css
