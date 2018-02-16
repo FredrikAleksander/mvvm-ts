@@ -9,6 +9,7 @@
     "@types/chai": "^4.1.2",
     "@types/chai-as-promised": "^7.1.0",
     "@types/mocha": "^2.2.48",
+    "@types/node": "^9.4.6",
     "@types/sinon": "^4.1.3",
     "@types/sinon-chai": "^2.7.29",
     "chai": "^4.1.2",
@@ -34,9 +35,9 @@
   "scripts": {
     "build": "rollup -c rollup.config.js && tsc",
     "debug": "tsc && mocha --nolazy --inspect --inspect-brk build/specs/**/*.spec.js",
-	"test:unit": "mocha build/specs/**/*.spec.js",
-	"test:e2e": "node build/e2erunner.js",
-	"test": "mocha build/specs/**/*.spec.js && node build/e2erunner.js",
+    "test:unit": "mocha build/specs/**/*.spec.js",
+    "test:e2e": "node build/e2erunner.js",
+    "test": "mocha build/specs/**/*.spec.js && node build/e2erunner.js",
     "build-and-test:unit": "tsc && mocha build/specs/**/*.spec.js",
     "build-and-test:e2e": "rollup -c rollup.config.js && tsc && node build/e2erunner.js"
   },
