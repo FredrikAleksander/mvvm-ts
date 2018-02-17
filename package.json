@@ -1,6 +1,6 @@
 {
   "name": "mvvm-ts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Typescript MVVM Framework",
   "main": "./build/index.js",
   "module": "./build/module.esm",

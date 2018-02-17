@@ -18,3 +18,4 @@ deploy:
         on:
                 tags: true
                 node: "7"
+                branch: master
