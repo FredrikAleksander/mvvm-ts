@@ -34,7 +34,7 @@ export default [
     sourcemap: true,
     file: pkg.main
   },
-
+  external: ["tslib", "reflect-metadata"]
 },
 {
   plugins: [
@@ -65,7 +65,7 @@ export default [
     sourcemap: true,
     file: pkg.module
   },
-
+  external: ["tslib", "reflect-metadata"]
 },
 {
     plugins: [

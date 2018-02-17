@@ -11,10 +11,10 @@ before_script:
         - "sh -e /etc/init.d/xvfb start"
 script: npm run build-and-test
 deploy:
+        skip_cleanup: true
         provider: npm
         email: "fredrikaxk@gmail.com"
         api_key: $NPM_API_KEY
-        skip_cleanup: true
         on:
                 node: "7"
                 branch: master
