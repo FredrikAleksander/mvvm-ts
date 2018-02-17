@@ -9,17 +9,12 @@ addons:
 before_script:
         - "export DISPLAY=:99.0"
         - "sh -e /etc/init.d/xvfb start"
-        - sleep 3
 script: npm run build-and-test
-jobs:
-        includes:
-                - stage: npm release
-                  node_js: "7"
-                  script: "Deploying to npm"
-                  deploy:
-                          provider: npm
-                          email: "fredrikaxk@gmail.com"
-                          api_key: $NPM_API_KEY
-                          skip_cleanup: true
-                          on:
-                                  tags: true
+deploy:
+        provider: npm
+        email: "fredrikaxk@gmail.com"
+        api_key: $NPM_API_KEY
+        skip_cleanup: true
+        on:
+                tags: true
+                node: "7"
