@@ -1,6 +1,6 @@
 import { TodoDelete } from '../../viewmodels/delete';
 import { injectable } from '../../../../mvvm/main';
-import { HtmlView, querySelector, binding, trigger } from '../../../../mvvm-web/main';
+import { HtmlView, BindingType, querySelector, binding, trigger } from '../../../../mvvm-web/main';
 
 @injectable()
 export class TodoDeleteView extends HtmlView<TodoDelete> {
@@ -8,7 +8,7 @@ export class TodoDeleteView extends HtmlView<TodoDelete> {
 <button id="submit">Delete</button>
 `
 		@querySelector('#title')
-		@binding('title', binding.From)
+		@binding('title', BindingType.From)
 		title: HTMLElement;
 
 		@querySelector('#submit')

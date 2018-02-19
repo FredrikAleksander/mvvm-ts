@@ -1,6 +1,6 @@
 import { TodoCreate } from '../../viewmodels/create';
 import { injectable } from '../../../../mvvm/main';
-import { HtmlView, querySelector, binding, trigger } from '../../../../mvvm-web/main';
+import { HtmlView, querySelector, binding, trigger, BindingType, TriggerType } from '../../../../mvvm-web/main';
 
 @injectable()
 export class TodoCreateView extends HtmlView<TodoCreate> {
@@ -17,11 +17,11 @@ export class TodoCreateView extends HtmlView<TodoCreate> {
 		`
 
 		@querySelector('#title')
-		@binding('title', binding.To)
+		@binding('title', BindingType.To)
 		title: HTMLElement;
 
 		@querySelector('#description')
-		@binding('description', binding.To)
+		@binding('description', BindingType.To)
 		description: HTMLElement;
 
 		@querySelector('#submit')

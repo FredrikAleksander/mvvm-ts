@@ -1,6 +1,6 @@
 import { TodoEdit } from '../../viewmodels/edit';
 import { injectable } from '../../../../mvvm/main';
-import { HtmlView, querySelector, binding, trigger } from '../../../../mvvm-web/main';
+import { HtmlView, BindingType, querySelector, binding, trigger } from '../../../../mvvm-web/main';
 
 @injectable()
 export class TodoEditView extends HtmlView<TodoEdit> {
@@ -17,11 +17,11 @@ export class TodoEditView extends HtmlView<TodoEdit> {
 		`
 
 		@querySelector('#title')
-		@binding('title', binding.TwoWay)
+		@binding('title', BindingType.TwoWay)
 		title: HTMLElement;
 
 		@querySelector('#description')
-		@binding('description', binding.TwoWay)
+		@binding('description', BindingType.TwoWay)
 		description: HTMLElement;
 
 		@querySelector('#submit')

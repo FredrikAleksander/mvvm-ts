@@ -1,5 +1,5 @@
 import { TodoDetails } from '../../viewmodels/details';
-import { HtmlView, querySelector, binding, trigger } from '../../../../mvvm-web/main';
+import { HtmlView, BindingType, querySelector, binding, trigger } from '../../../../mvvm-web/main';
 import { injectable } from '../../../../mvvm/main';
 import detailsTemplate from './templates/details.ejs';
 
@@ -8,10 +8,10 @@ export class TodoDetailsView extends HtmlView<TodoDetails> {
 		template = `<h1></h1><p></p>`
 
 		@querySelector('h1')
-		@binding('title', binding.From)
+		@binding('title', BindingType.From)
 		title: HTMLHeadingElement;
 
 		@querySelector('p')
-		@binding('description', binding.From)
+		@binding('description', BindingType.From)
 		description: HTMLParagraphElement;
 }

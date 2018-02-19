@@ -7,5 +7,9 @@ export { ObservableCollection } from './observable';
 export { IPresenter } from './presenter';
 export { IRouter, NullRouter, Router, PathParameter } from './router';
 export { ISubscription } from './subscription';
-export { IViewBase, IView, IViewFactory, View  } from './view';
-export { IViewModel, ViewModel, IViewModelFactory, ViewModelFactory, property } from './viewmodel';
+export { IViewBase, IView, IViewFactory, View,
+		IBinder, IBinding, BindingType, TriggerType,
+		IBindingFactory, ITriggerBinder,
+		binding, trigger } from './view';
+export { IViewModel, ViewModel, IViewModelFactory, ViewModelFactory, 
+		 property } from './viewmodel';
